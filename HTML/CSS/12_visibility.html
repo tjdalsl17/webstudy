@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .wrap1 > img:nth-of-type(2) {
+            /* 자리는 차지하고 안보인다. */
+            visibility: hidden;
+        }
+   </style>
+<div class="wrap1">
+    <img src="../../../images/flower1.jpg" width="200">
+    <img src="../../../images/flower2.jpg" width="200">
+    <img src="../../../images/flower3.jpg" width="200">
+</div>
+<style>
+    .wrap2 > div {
+        width : 200px;
+    }
+    .wrap2 > div > img {
+        width: 100%;
+    }
+    .wrap2 > div:hover > img {
+        visibility: hidden;
+    }
+</style>
+<div class="wrap2">
+    <div><img src="../../../images/flower1.jpg"></div>
+    <div><img src="../../../images/flower2.jpg"></div>
+    <div><img src="../../../images/flower3.jpg"></div>
+    </div>
+
+    <hr>
+
+    <style>
+        .title {
+            font-weight: 900;
+            font-size: 24px;
+            text-align: left;
+        }
+        .wrap3 > .box1 {
+            width:100px;
+            height:100px;
+            background-color: gray;
+            border:black;
+        }
+    </style>
+    <div class="wrap3">
+        <div class="title"> <span>다음 중 블록레벨이 아닌 태그는 무엇인가요?</span></div>
+       <p> 1. &lt;div&gt;</p>
+       <p> 2. &lt;ul&gt;</p>
+       <p> 3. &lt;a&gt;</p>
+       <p> 4. &lt;p&gt;</p>
+       <p> 5. &lt;table&gt; <br>
+        <span class="show_answer">정답보기</span>
+</body>
+</html>
