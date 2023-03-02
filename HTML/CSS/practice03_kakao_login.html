@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .doctitle {
+            font-size: 30px;
+            text-align: center;
+        }
+        .content_article > .box1 {
+            width: 500px;
+            height: 300px;
+            border: 1px solid gray;
+
+        }
+        .box2 {
+            width: 300px;
+            height: 50px;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 5px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .box3 {
+            width: 300px;
+            height: 50px;
+            background-color: whitesmoke;
+            text-align: center;
+            border-radius: 5px;
+            margin : 0 auto;
+            padding : 10px;
+        }
+        .doc-footer {
+            text-align: center;
+            font-size: 10px;
+        }
+       
+        
+        
+    </style>
+    <div class="container-doc">
+        <div class="inner-container">
+            <main class="doc-main">
+                <div class="doctitle">kakao</div>
+                <article class="content-article">
+                    <div class="box1">
+                    <div class="cont_login">
+                    <div class="login_kakaomail">
+                        <form>
+                            <label for="login_kakaoemail"></label>
+                            <br>
+                            <input type="text" name="id" id="user_id" placeholder="카카오메일 아이디,이메일,전화번호" disabled>
+                            <input type="text" placeholder="비밀번호" disabled> <br>
+                            <input type="checkbox" name="login_kakaoemail">로그인 상태 유지
+                        </form>
+                    </div>
+                    </div>
+                    <div class="box2">로그인</div>
+                    <div class="box3">QR코드 로그인</div>
+                </div>
+                </article>
+
+            </main>
+            <footer class="doc-footer">
+                <strong class="screen_out">서비스 이용정보</strong>
+                <div class="service_info">
+                    <a href="javascript:void(0)" class="link_info">이용약관</a>
+                    <a href="javascript:void(0)" class="link_info"><strong>개인정보 처리방침</strong></a>
+                    <a href="javascript:void(0)" class="link_info">운영정책</a>
+                    <a href="javascript:void(0)" class="link_info">고객센터</a>
+                    <a href="javascript:void(0)" class="link_info">공지사항</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
