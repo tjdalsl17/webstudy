@@ -7,7 +7,7 @@
     <title>개인정보수정</title>
 </head>
 <body>
-    <form method="post">
+    <form action="login.html">
         <table>
             <tbody>
                 <tr>
@@ -26,9 +26,9 @@
                 <tr>
                     <td>생일</td>
                     <td>
-                        <input type="text" id="birthday" size="4" maxlength="4">년
-                        <input type="text" id="birthday" size="2" maxlength="2">월
-                        <input type="text" id="birthday" size="2" maxlength="2">일
+                        <input type="text"  size="4" maxlength="4">년
+                        <input type="text"  size="2" maxlength="2">월
+                        <input type="text"  size="2" maxlength="2">일
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +62,7 @@
                     <td>
                         <label for="trip"><input type="checkbox" name="hobbies" id="trip" value="1">여행</label>
                         <label for="movie"><input type="checkbox" name="hobbies" id="movie" value="2">영화</label>
-                        <label for="reading"><input type="checkbox" name="hobbies" id="reading" value="4">독서
+                        <label for="reading"><input type="checkbox" name="hobbies" id="reading" value="4">독서</label>
                         <label for="music"><input type="checkbox" name="hobbies" id="music" value="8">음악</label>
                         <label for="etc"><input type="checkbox" name="hobbies" id="hobbies" value="16">관심없음</label>
                     </td>
@@ -73,9 +73,11 @@
                         <textarea rows="5" cols="50"></textarea>
                     </td>
                 </tr>
+                <tr>
+                    <td><button>수정완료</button></td>
+                </tr>
             </tbody>
         </table>
-
     </form>
 </body>
 </html>
