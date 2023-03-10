@@ -182,36 +182,56 @@
                 </form>
                     <br>
                     <h1>연습문제-2</h1>
-                    <form method="post"></form>
-                      <table></table>
+                    <form method="post">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="id" placeholder="아이디"></td>
+                                    <td rowspan="2"><button>로그인</button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="password" name="pw" placeholder="비밀번호"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </form>
                       <h1>연습문제-3</h1>
-                      <table>
-                        <thead>
-                            <tr>
-                                <th colspan="2"></th>개인 정보 작성</th>
-                            </tr>
-                        <tbody>
-                            <tr>
-                        <label for="name">이름</label>
-                            <td><input type="text" name="name" id="name"></td>
-                            </tr>
-                        </label>
-                        <br>
-                        <label for="email"></label><td colspan="5"></td>
-                            메일 주소 <input type="text" id="email">
-                        </label>
-                        <br>
-                        <label for="number"></label><td colspan="5">
-                        연락처 <input type="number" id="number"></label></td>
-                        <br>
-                        <td colspan="5"><label for="HyperText"></label></td>
-                            블로그/홈페이지 <input type="number" id="HyperText">
-                        </label>
-                        </tbody>
-                        <br>
-                        <input type="submit" value="제출하기">
-                        <input type="reset" value="다시작성">
-                      </table>
+                      <form method="post">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">개인 정보 작성</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><label for="name">이름</label></td>
+                                    <td><input type="text" name="name" id="name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">메일 주소</label></td>
+                                    <td><input type="text" name="email" id="email"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="tel">연락처</label></td>
+                                    <td><input type="text" name="tel" id="tel"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="url">블로그/홈페이지</label></td>
+                                    <td><input type="text" name="url" id="url"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="2">
+                                        <button>제출하기</button>
+                                        <input type="reset" value="다시작성">
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
                       <h1>연습문제-4</h1>
                       <form method="post">
                         <p>
