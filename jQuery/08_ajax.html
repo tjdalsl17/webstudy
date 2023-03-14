@@ -41,7 +41,7 @@
         $('#btn2').on('click', function(){
             $.ajax({
                 type: 'GET',
-                url: 'product1.xml',
+                url: 'roduct1.xml',
                 async: true,
                 dataType: 'xml',
                 success: function(data){  // var data = xhr.responseXML;
@@ -102,8 +102,8 @@
                 dataType: 'json',
                 success: function(data){    // var data = JSON.parse(xhr.responseText);
                     $.each(data, (i, product)=>{
-                        var ul = $('<ul>');
-                        ul.append($('<li>').text(product.model)); // 일반 객체라서 $안묶어줌
+                        var table = $('<table>');
+                        ul.append($('<li>').text(product.model)); // JSON은 일반 객체라서 $로 안묶어줌
                         ul.append($('<li>').text(product.maker));
                         ul.append($('<li>').text(product.price));
                         $('#box4').append(ul);
@@ -116,6 +116,63 @@
                 }
             });
         });
+    </script>
+        <div>
+            <button id="btn5">book.xml 조회하기</button>
+        </div>
+    <div id="box5">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>제목(title)</td>
+                    <td>썸네일(image+link)</td>
+                    <td>저자(author)</td>
+                    <td>할인가(discount)</td>
+                    <td>출판사(publisher)</td>
+                    <td>출판일(pubdate)</td>
+                    <td>ISBN(isbn)</td>
+                    <td>개요(description)</td>
+                </tr>
+            </thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        $('#btn5').on('click', function(){
+            $.ajax({
+                type: 'GET',
+                url: 'book.xml',
+                async: true,
+                dataType: 'xml',
+                success: function(data){
+                    $.each($(data).find('item'), (i, item)=>{
+                        var tr = $('<tr>');
+                        tr.append($('<td>').html($(item).find('title').text()));
+                        tr.append($('<td>').html($('<a>').attr('target', '_blank').attr('href', $(item).find('image+link').text())));
+                        tr.append($('<td>').html($(item).find('author').text()));
+                        tr.append($('<td>').html($('<span>').text($(item).find('discount').text() + 원)));
+                        tr.append($('<td>').html($(item).find('publisher').text()));
+                        var pubdate = $(item).find('pubdate').text();
+                        tr.append($('<td>').html(pubdate.substring(0,4) + '-' + pubdate.substring(4,6) + '-' + pubdate.substring(6,8)));
+                    })
+                },
+                error: function(jqXHR){
+                    $('#box5').append($('<div>').text(jqXHR.status));
+                    $('#box5').append($('<div>').text(jqXHR.statusText));
+                    $('#box5').append($('<div>').text(jqXHR.responseText));
+                }
+            });
+        });
+        
     </script>
 </body>
 </html>
